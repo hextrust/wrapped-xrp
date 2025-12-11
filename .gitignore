@@ -21,3 +21,7 @@ pnpm-error.log
 # Editor and OS files
 .DS_Store
 .idea
+
+# Solana
+.anchor
+target
