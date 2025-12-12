@@ -9,11 +9,13 @@ import {
     getOwnerAddress,
     getRequiredDVNs,
 } from './consts/testnet'
+import { getOftStoreAddress } from './tasks/solana'
 
 // Define all contracts.
 export const CONTRACTS: OmniPointHardhat[] = [
     { eid: EndpointId.SEPOLIA_V2_TESTNET, contractName: 'WXRPMintBurnOFTAdapter' },
     { eid: EndpointId.HYPERLIQUID_V2_TESTNET, contractName: 'WXRPMintBurnOFTAdapter' },
+    { eid: EndpointId.SOLANA_V2_TESTNET, address: getOftStoreAddress(EndpointId.SOLANA_V2_TESTNET) },
 ]
 
 // Generate all possible connections.
@@ -42,7 +44,7 @@ export const generateConnections = async () => {
                     ulnConfig: {
                         confirmations: CONFIRMATIONS[from.eid],
                         requiredDVNs: getRequiredDVNs(from.eid),
-                        optionalDVNs: getOptionalDVNs(from.eid),
+                        optionalDVNs: getOptionalDVNs(from.eid, to.eid),
                         optionalDVNThreshold: OPTIONAL_DVNS_THRESHOLD,
                     },
                 },
@@ -50,7 +52,7 @@ export const generateConnections = async () => {
                     ulnConfig: {
                         confirmations: CONFIRMATIONS[to.eid],
                         requiredDVNs: getRequiredDVNs(from.eid),
-                        optionalDVNs: getOptionalDVNs(from.eid),
+                        optionalDVNs: getOptionalDVNs(from.eid, to.eid),
                         optionalDVNThreshold: OPTIONAL_DVNS_THRESHOLD,
                     },
                 },
