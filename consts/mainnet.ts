@@ -58,7 +58,7 @@ export const OWNERS: Partial<Record<EndpointId, string>> = {
     [EndpointId.ETHEREUM_V2_MAINNET]: '0xfA633B67b1d9371eBa32cf3476F275D75C75ce77',
     [EndpointId.HYPERLIQUID_V2_MAINNET]: '0xfA633B67b1d9371eBa32cf3476F275D75C75ce77',
     [EndpointId.OPTIMISM_V2_MAINNET]: '0xfA633B67b1d9371eBa32cf3476F275D75C75ce77',
-    [EndpointId.SOLANA_V2_MAINNET]: 'TODO', // Replace with your Solana mainnet wallet address
+    [EndpointId.SOLANA_V2_MAINNET]: 'FPg2KxupxTMNFk4PwBXBVF2PSvVfKyL9QBWi21huA47E',
 } as const
 
 export const getRequiredDVNs = (_eid: EndpointId): string[] => {
