@@ -7,7 +7,7 @@ resolution = false
 skip-lint = false
 
 [programs.localnet]
-oft = "G2BYTnfGCMQAErMZkTBCFSapKevzf6QCjizjXi8hFEtJ"
+oft = "H5WWM7uWHbmZjThKyPbjNGvAagizKA9zzchZWwn79W99"
 
 [registry]
 url = "https://api.apr.dev"
@@ -15,6 +15,3 @@ url = "https://api.apr.dev"
 [provider]
 cluster = "localnet"
 wallet = "./junk-id.json"
-
-[scripts]
-test = "npx jest test/anchor"

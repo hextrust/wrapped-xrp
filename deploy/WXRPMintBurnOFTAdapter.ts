@@ -31,7 +31,7 @@ export const deployMaba = async (hre: HardhatRuntimeEnvironment) => {
 
     // This contract requires >1.5M gas to deploy. Switching to big blocks in HyperEVM.
     const deployment = await hre.deployments.getOrNull(contractName)
-    if (isHyperEvm && !deployment) await useBigBlock(wallet!, isHyperEvmTestnet, logLevel)
+    if (isHyperEvm && !deployment) await useBigBlock(wallet!, isHyperEvmTestnet, logLevel, true)
 
     const result = await deploy(contractName, {
         from: signer.address,
@@ -41,7 +41,7 @@ export const deployMaba = async (hre: HardhatRuntimeEnvironment) => {
         skipIfAlreadyDeployed: false,
     })
 
-    if (isHyperEvm && !deployment) await useSmallBlock(wallet!, isHyperEvmTestnet, logLevel)
+    if (isHyperEvm && !deployment) await useSmallBlock(wallet!, isHyperEvmTestnet, logLevel, true)
 
     return result
 }

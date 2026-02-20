@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "chainId": "1",
+  "createdAt": 1769030917913,
+  "meta": {
+    "name": "LayerZero Wire Configuration - ethereum-mainnet",
+    "description": "Transaction for LayerZero OApp wiring on ethereum-mainnet",
+    "txBuilderVersion": "1.17.1",
+    "createdFromSafeAddress": "0xfA633B67b1d9371eBa32cf3476F275D75C75ce77"
+  },
+  "transactions": [
+    {
+      "to": "0x01CacCa455d04F0D52231589F0deb543de9213E3",
+      "value": "0",
+      "data": "0x3400288b00000000000000000000000000000000000000000000000000000000000075d8dde8d977d37ab113e40c953625fe3afe62b74fa20e785a8575688622f6a4da92",
+      "operation": 0
+    }
+  ]
+}
